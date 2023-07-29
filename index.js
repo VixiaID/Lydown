@@ -50,8 +50,7 @@ class Lydown extends EventEmitter {
         fileStream.end();
         const status = {
           name: outputPath,
-          size: humanReadableSize(contentLength),
-          elapsed: formatTime(elapsed)
+          size: humanReadableSize(contentLength)
         };
         this.emit('end', status);
       });
